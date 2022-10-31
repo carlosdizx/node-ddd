@@ -42,5 +42,37 @@ DB_MYSQL_DATABASE=prueba
 npm run dev
 ```
 
+variables de entorno en archivo .env
+```
+#Environment Variables for App
+PORT=3000
+
+#Environment Variables for MongoDB
+DB_MONGO_URI=mongodb://localhost:27017/prueba
+
+#Environment Variables for MySQL
+DB_MYSQL_HOST=localhost
+DB_MYSQL_PORT=3306
+DB_MYSQL_USER=root
+DB_MYSQL_PASSWORD=1234
+DB_MYSQL_DATABASE=prueba
+
+#Environment Variables for PostgreSQL
+DB_POSTGRES_HOST=localhost
+DB_POSTGRES_PORT=5432
+DB_POSTGRES_USER=postgres
+DB_POSTGRES_PASSWORD=postgres
+DB_POSTGRES_DATABASE=prueba
+
+#Environment Variables for RabbitMQ
+BROKER_RABBIT_HOST=localhost
+BROKER_RABBIT_PORT=5672
+BROKER_RABBIT_USERNAME=superadmin
+BROKER_RABBIT_PASSWORD=rH9b79tdVfekR5T
+BROKER_RABBIT_VHOST=/
+
+#Environment Variables for RabbitMQ
+HTTP_AXIOS_HOST_POKEAPI=https://pokeapi.co/api/v2/pokemon/
+```
 
 
