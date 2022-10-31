@@ -1,4 +1,4 @@
-# Aplicación con NodeJS, Express, TypeScript, MongoDB, MySQL y PostgreSQL
+# Aplicación con NodeJS, Express, TypeScript, MongoDB, MySQL, PostgreSQL, Axios y RabbitMQ
 
 ### Aplicación orientada al negocio, Arquitectura por capas
 
