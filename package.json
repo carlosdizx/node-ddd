@@ -1,5 +1,5 @@
 {
-  "name": "api-ddd",
+  "name": "node-ddd",
   "version": "1.0.0",
   "description": "Aplicación orientada al negocio, arquitectura por capas",
   "main": "index.js",
@@ -37,5 +37,13 @@
     "@types/node": "^18.11.7",
     "@types/uuid": "^8.3.4",
     "jest": "^28.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosdizx/node-ddd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carlosdizx/node-ddd/issues"
+  },
+  "homepage": "https://github.com/carlosdizx/node-ddd#readme"
 }
