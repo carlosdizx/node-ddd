@@ -1,0 +1,39 @@
+version: "3.5"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME:root
+      - MONGO_INITDB_ROOT_PASSWORD:root
+    volumes:
+      - ./db-volume:/data/db
+    ports:
+      - "27017:27017"
+  mongo-express:
+    image: mongo-express
+    container_name: mongo_express
+    restart: always
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME:root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD:root
+      - ME_CONFIG_MONGODB_SERVER:mongo
+    ports:
+      - "8081:8081"
+  rabbitmq:
+    image: "rabbitmq:3.6-management-alpine"
+    volumes:
+      - ./rabbit-db:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
+    environment:
+      AMQP_URL: "amqp://rabbitmq?connection_attempts=5&retry_delay=5"
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+networks:
+  default:
+    name: mongodb_network
